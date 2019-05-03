@@ -30,6 +30,8 @@ class PID {
    * @output The total PID error
    */
   double TotalError();
+  
+  double Output();
 
  private:
   /**
@@ -45,6 +47,10 @@ class PID {
   double Kp;
   double Ki;
   double Kd;
+  
+  //cte
+  double cte_old;
+  //double cte_total;
 };
 
 #endif  // PID_H
